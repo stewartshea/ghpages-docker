@@ -16,7 +16,7 @@ RUN chmod 644 /etc/passwd && \
 EXPOSE 35729
 EXPOSE 4000
 
-USER 10001
+# USER 10001
 WORKDIR ${APP_ROOT}
 
 CMD ["/bin/bash", "-c", "${APP_ROOT}/bin/run.sh"]
