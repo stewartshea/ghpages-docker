@@ -7,6 +7,8 @@ RUN apk --no-cache add git
 ENV APP_ROOT=/jekyll/srv
 ENV PATH=${APP_ROOT}/bin:${PATH} HOME=${APP_ROOT}
 COPY bin/ ${APP_ROOT}/bin/
+
+## Need to clean up permissions as a result of troubleshooting
 RUN chmod -R u+x ${APP_ROOT}/bin && \
     chgrp -R 0 ${APP_ROOT} && \
     chmod -R g=u ${APP_ROOT} /etc/passwd && \
