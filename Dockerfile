@@ -16,7 +16,7 @@ RUN chmod -R u+x ${APP_ROOT}/bin && \
 EXPOSE 35729
 EXPOSE 4000
 
-USER 10000000001
+USER 1000001
 WORKDIR ${APP_ROOT}
 
 CMD ["/bin/bash", "-c", "${APP_ROOT}/bin/run.sh"]
