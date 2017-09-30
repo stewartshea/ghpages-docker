@@ -17,4 +17,4 @@ EXPOSE 4000
 USER 10001
 WORKDIR ${APP_ROOT}
 
-CMD ["/bin/bash", "-c", "${APP_ROOT}/run.sh"]
+CMD ["/bin/bash", "-c", "${APP_ROOT}/bin/run.sh"]
