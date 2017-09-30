@@ -2,6 +2,7 @@ FROM jekyll/jekyll:pages
 
 RUN apk --no-cache add git
 
+WORKDIR /srv/jekyll
 COPY run.sh .
 RUN chmod +x run.sh
 
