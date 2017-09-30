@@ -4,7 +4,7 @@ RUN apk --no-cache add git
 
 WORKDIR /srv/jekyll
 VOLUME /srv/jekyll
-COPY run.sh .
+ADD run.sh 
 RUN chmod +x run.sh
 
 EXPOSE 35729
