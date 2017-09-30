@@ -10,7 +10,8 @@ COPY bin/ ${APP_ROOT}/bin/
 RUN chmod -R u+x ${APP_ROOT}/bin && \
     chgrp -R 0 ${APP_ROOT} && \
     chmod -R g=u ${APP_ROOT} /etc/passwd && \
-    sed -i '/jekyll/d' /etc/passwd
+    sed -i '/jekyll/d' /etc/passwd && \
+    useradd -r -u 1000001 -g jekyll root 
 
 
 EXPOSE 35729
