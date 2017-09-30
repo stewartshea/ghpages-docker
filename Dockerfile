@@ -2,8 +2,8 @@ FROM jekyll/jekyll:pages
 
 RUN apk --no-cache add git
 
-COPY run.sh . && \
-     chmod +x run.sh
+COPY run.sh .
+RUN chmod +x run.sh
 
 EXPOSE 35729
 EXPOSE 4000
