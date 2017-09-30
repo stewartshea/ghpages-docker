@@ -12,7 +12,7 @@ RUN chmod -R u+x ${APP_ROOT}/bin && \
     chmod -R g=u ${APP_ROOT} /etc/passwd && \
     usermod -u 1000001 jekyll && \
     usermod -d ${APP_ROOT} jekyll && \
-    groupmod -g 0 jekyll && \
+    usermod -aG 0 jekyll && \
     chown -R jekyll:jekyll /jekyll
 
 
