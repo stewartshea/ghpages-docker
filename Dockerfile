@@ -10,5 +10,7 @@ RUN chmod +x run.sh
 EXPOSE 35729
 EXPOSE 4000
 
+WORKDIR /srv/jekyll
+VOLUME /srv/jekyll
 
 CMD ["sh run.sh"]
