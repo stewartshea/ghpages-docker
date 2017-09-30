@@ -6,6 +6,6 @@ if ! whoami &> /dev/null; then
 fi
 exec "$@"
 
-git clone https://$GIT_TOKEN@$GIT_URL ${APP_ROOT}/site
+git clone -b $BRANCH https://$GIT_TOKEN@$GIT_URL ${APP_ROOT}/site
 cd ${APP_ROOT}/site
 jekyll serve
