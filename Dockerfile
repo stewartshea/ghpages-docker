@@ -15,6 +15,7 @@ RUN chmod -R u+x ${APP_ROOT}/bin && \
     usermod -aG 0 jekyll && \
     groupmod -g 1000001 jekyll && \
     chown -R jekyll:jekyll /jekyll && \
+    find / -group 1000 -exec chgrp -h jekyll {} \; && \
     find / -user 1000 -exec chown -h jekyll {} \;
 
 
