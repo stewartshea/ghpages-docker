@@ -4,8 +4,8 @@ RUN apk --no-cache add git
 
 
 # install gitbook versions
-RUN git clone $GIT_URL site && \
-    cd /srv/jekyll/site 
+RUN git clone https://$GIT_TOKEN@$GIT_URL site && \
+    cd /srv/jekyll/site
 
 
 
