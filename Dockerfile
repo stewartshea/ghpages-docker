@@ -12,7 +12,7 @@ RUN chmod -R u+x ${APP_ROOT}/bin && \
     chmod -R g=u ${APP_ROOT} /etc/passwd && \
     usermod -u 1000001 jekyll && \
     groupmod -g  1000001 jekyll && \
-    chown ${APP_ROOT}/* jekyll:jekyll
+    chown jekyll:jekyll ${APP_ROOT}/*
 
 
 EXPOSE 35729
