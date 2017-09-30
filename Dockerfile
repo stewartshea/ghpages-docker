@@ -13,7 +13,8 @@ RUN chmod -R u+x ${APP_ROOT}/bin && \
     usermod -u 1000001 jekyll && \
     usermod -d ${APP_ROOT} jekyll && \
     usermod -aG 0 jekyll && \
-    chown -R jekyll:jekyll /jekyll
+    chown -R jekyll:jekyll /jekyll && \
+    find / -user 1000 -exec chown -h jekyll {} \;
 
 
 EXPOSE 35729
